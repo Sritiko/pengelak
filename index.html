@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teks Garang di Atas Gambar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full height */
+            display: flex;
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the whole container without losing aspect ratio */
+        }
+
+        .text {
+            position: absolute;
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            font-size: 5vw; /* Responsive font size */
+            text-align: center;
+            width: 100%;
+            text-transform: uppercase;
+            line-height: 1.2;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 600px) {
+            .text {
+                font-size: 8vw; /* Larger font for smaller devices */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="boxing.jpg" alt="Boxing Image" class="image">
+        <div class="text">
+            Go away<br>
+            Find your peace
+        </div>
+    </div>
+</body>
+</html>
